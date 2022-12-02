@@ -13,7 +13,7 @@ class Day02
 
   # scores: win is 6, draw is 3, loss is 0
   # first -- find outcomes
-  #.map { |elf| elf.split("\n").map(&:to_i).sum }
+
   def win
     return 6 if data.map { |combo| combo == "A Y" || " B Z" || "C X" }
   end
@@ -27,5 +27,6 @@ class Day02
   end
 
   def rock_paper_scissors
+   total_score = total_score + 1 if data.map { |value| value[2] == "X" }
   end
 end 
